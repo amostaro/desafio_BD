@@ -1,11 +1,25 @@
 
-w
-Gsrc/main/java/com/totalshakes/exception/EstoqueQuantidadeException.java,4/8/48de160f17237216f1d143bf02067bfb238eb33c
-~
-Nsrc/main/java/com/totalshakes/exception/IngredienteNaoEncontradoException.java,8/c/8c8cd39cbb7018cc625d47a7d5aa8e331e181834
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+p
+@src/main/java/com/totalshakes/wstotalshakes/model/Adicional.java,2/5/2560e971f0123cb0974c191fd7e780a3fb17338e
+n
+>src/main/java/com/totalshakes/wstotalshakes/model/Armazem.java,0/7/07c3ab20b8f37770204e06f0a2e00d0dc7a7f2a7
+z
+Jsrc/main/java/com/totalshakes/wstotalshakes/controller/BaseController.java,5/8/580d1a0cb4eb015304d99c890142d4bccef91230
+q
+Asrc/main/java/com/totalshakes/wstotalshakes/comum/BaseEntity.java,9/3/930fad208d946dbbe3a38cca1b9ddb8a9c2983e5
+u
+Esrc/main/java/com/totalshakes/wstotalshakes/comum/BaseExtensions.java,f/7/f738a8a93452cae4c75c45fdb33baf67cd427108
+t
+Dsrc/main/java/com/totalshakes/wstotalshakes/service/BaseService.java,c/8/c8657b663ef2bf8272559d7ce59b635c1bfe9c0e
+t
+Dsrc/main/java/com/totalshakes/wstotalshakes/utils/DateTimeUtils.java,4/0/40fa32f750789c840f163694d4047d6523aa8c78
+r
+Bsrc/main/java/com/totalshakes/wstotalshakes/model/Ingrediente.java,8/5/8561c81efc0bafb5a6624e33adfde380865a9b17
+y
+Isrc/main/java/com/totalshakes/wstotalshakes/WstotalshakesApplication.java,5/3/532c25378f119928e0fc18e9da4f1b982694b8c8
 s
-Csrc/main/java/com/totalshakes/repository/IngredienteRepository.java,3/6/365e49ff0cee21a8a3bdf250df58c68d5fd93aa3
-x
-Hsrc/main/java/com/totalshakes/exception/QuantidadeInvalidaException.java,e/c/ec9288da0941f5d243e1619a795dffd23f29d80b
-e
-5src/main/java/com/totalshakes/DTO/IngredienteDTO.java,b/a/ba32ae56f626062e821274fef961e404731c62cb
+Csrc/main/java/com/totalshakes/wstotalshakes/DTO/IngredienteDTO.java,6/2/622bc5b21d8f409b5ca239a44c172a66f37b2a40
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
