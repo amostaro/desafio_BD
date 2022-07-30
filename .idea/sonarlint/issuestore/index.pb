@@ -7,8 +7,6 @@ n
 >src/main/java/com/totalshakes/wstotalshakes/model/Armazem.java,0/7/07c3ab20b8f37770204e06f0a2e00d0dc7a7f2a7
 z
 Jsrc/main/java/com/totalshakes/wstotalshakes/controller/BaseController.java,5/8/580d1a0cb4eb015304d99c890142d4bccef91230
-q
-Asrc/main/java/com/totalshakes/wstotalshakes/comum/BaseEntity.java,9/3/930fad208d946dbbe3a38cca1b9ddb8a9c2983e5
 u
 Esrc/main/java/com/totalshakes/wstotalshakes/comum/BaseExtensions.java,f/7/f738a8a93452cae4c75c45fdb33baf67cd427108
 t

@@ -64,52 +64,52 @@ public class IngredienteService extends BaseService{
 
     }
 
-    public Ingrediente getIngrediente(IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
+//    public Ingrediente getIngrediente(IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
+//
+//        Ingrediente ingrediente = this.getIngredienteById(ingredienteDTO.getId());
+//
+//        //TODO
+//
+//        return ingredienteRepository.save(ingrediente);
+//    }
 
-        Ingrediente ingrediente = this.getIngredienteById(ingredienteDTO.getId());
-
-        //TODO
-
-        return ingredienteRepository.save(ingrediente);
-    }
-
-    public void updateIngredienteById(Integer idIngrediente) throws IngredienteNaoEncontradoException {
-
-        //TODO
-
-        Ingrediente ingrediente = this.getIngredienteById(idIngrediente);
-
-        ingredienteRepository.save(ingrediente);
-    }
+//    public void updateIngredienteById(Integer idIngrediente) throws IngredienteNaoEncontradoException {
+//
+//        Ingrediente ingrediente = this.getIngredienteById(idIngrediente);
+//
+//        ingrediente.setNome(ingrediente.getNome());
+//
+//        ingredienteRepository.save(ingrediente);
+//    }
 
     public Ingrediente updateIngrediente(IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
 
-        //TODO
-
-        Ingrediente ingrediente = this.getIngredienteById(ingredienteDTO.getId());
-
-        //TODO
+        Ingrediente ingrediente = null;
+        if (!ObjectUtils.isEmpty(ingredienteDTO)) {
+            ingrediente = this.getIngredienteById(ingredienteDTO.getId());
+            ingrediente.setNome(ingredienteDTO.getNome());
+        } else {
+            throw new IngredienteNaoEncontradoException();
+        }
 
         return ingredienteRepository.save(ingrediente);
     }
 
     public void deleteIngredienteById(Integer idIngrediente) throws IngredienteNaoEncontradoException {
 
-        //TODO
-
         this.getIngredienteById(idIngrediente); //validação
 
         ingredienteRepository.deleteById(idIngrediente);
     }
 
-    public void deleteIngrediente(IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
-
-        //TODO
-
-        Ingrediente ingrediente = this.getIngredienteById(ingredienteDTO.getId());
-
-        //TODO
-
-        ingredienteRepository.delete(ingrediente);
-    }
+//    public void deleteIngrediente(IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
+//
+//        //TODO
+//
+//        Ingrediente ingrediente = this.getIngredienteById(ingredienteDTO.getId());
+//
+//        //TODO
+//
+//        ingredienteRepository.delete(ingrediente);
+//    }
 }

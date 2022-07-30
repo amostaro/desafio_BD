@@ -23,13 +23,9 @@ public class BaseEntity implements Serializable {
     @Transient
     private Date criadoEmSalvo;
 
-    @Transient
-    private Integer criadoPorSalvo;
-
     @PostLoad
     private void saveState(){
         setCriadoEmSalvo(getCriadoEm());
-        setCriadoPorSalvo(getCriadoPor());
     }
 
     @Temporal(TemporalType.TIMESTAMP)
@@ -44,8 +40,6 @@ public class BaseEntity implements Serializable {
     @Column(name = "apagado_em")
     private Date apagadoEm;
 
-    private Integer criadoPor;
-    private Integer atualizadoPor;
 
     @PrePersist
     private void prePersist() {
@@ -55,12 +49,6 @@ public class BaseEntity implements Serializable {
         if (ObjectUtils.isEmpty(this.atualizadoEm)) {
             this.atualizadoEm = DateTimeUtils.newDate();
         }
-//        if (ObjectUtils.isEmpty(this.criadoPor)) {
-//            this.criadoPor = UserContextUtil.getCurrentUserId();
-//        }
-//        if (ObjectUtils.isEmpty(this.atualizadoPor)) {
-//            this.atualizadoPor = UserContextUtil.getCurrentUserId();
-//        }
     }
 
     @PreUpdate
@@ -68,14 +56,8 @@ public class BaseEntity implements Serializable {
         if (ObjectUtils.isEmpty(this.atualizadoEm)) {
             this.atualizadoEm = DateTimeUtils.newDate();
         }
-//        if (ObjectUtils.isEmpty(this.atualizadoPor)) {
-//            this.atualizadoPor = UserContextUtil.getCurrentUserId();
-//        }
         if (ObjectUtils.isEmpty(this.criadoEm)) {
             this.criadoEm = this.criadoEmSalvo;
-        }
-        if (ObjectUtils.isEmpty(this.criadoPor)) {
-            this.criadoPor = this.criadoPorSalvo;
         }
     }
 
@@ -84,8 +66,5 @@ public class BaseEntity implements Serializable {
         if (ObjectUtils.isEmpty(this.apagadoEm)) {
             this.apagadoEm = DateTimeUtils.newDate();
         }
-//        if (ObjectUtils.isEmpty(this.atualizadoPor)) {
-//            this.atualizadoPor = UserContextUtil.getCurrentUserId();
-//        }
     }
 }
