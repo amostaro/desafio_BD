@@ -7,5 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IngredienteRepository extends JpaRepository<Ingrediente, Integer> {
 
-    Ingrediente findByNome(String nome);
 }

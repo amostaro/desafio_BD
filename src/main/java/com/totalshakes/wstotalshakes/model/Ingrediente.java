@@ -13,8 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "ingredientes")
-@Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Ingrediente {
+public class Ingrediente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -23,14 +22,12 @@ public abstract class Ingrediente {
     @Column(name = "nome")
     private String nome;
 
-    //EnumTipoIngrediente
-    @Column(name = "tipo_ingrediente", length = 1)
-    private String tipoIngrediente;
+    //EnumTipo (base, adicional, topping)
+    @Column(name = "tipo", length = 1)
+    private String tipo;
 
-//    @ManyToOne
-//    @JoinColumn(name = "armazem_id")
-//    private Armazem armazem;
+    @ManyToOne
+    @JoinColumn(name = "armazens_id") //codigo no estoque
+    private Armazem armazem;
 
-//    @OneToMany
-//    private Adicional adicional;
 }

@@ -5,13 +5,16 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
-import javax.persistence.Column;
+import java.util.Set;
 
 @Data
-//@SuperBuilder
+@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class ArmazemDTO extends IngredienteDTO{
+public class ArmazemDTO {
 
+    private Integer id;
     private Integer quantidade;
+    private Set<IngredienteDTO> estoqueIngredientesDTO;
+
 }

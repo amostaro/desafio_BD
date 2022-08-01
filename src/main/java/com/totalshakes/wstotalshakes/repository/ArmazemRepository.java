@@ -7,6 +7,4 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ArmazemRepository extends JpaRepository<Armazem, Integer> {
 
-    Armazem findByNome(String nome);
-
 }

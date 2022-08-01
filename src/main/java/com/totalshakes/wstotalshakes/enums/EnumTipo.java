@@ -5,7 +5,7 @@ import org.springframework.util.StringUtils;
 
 import java.util.Arrays;
 
-public enum EnumTipoIngrediente {
+public enum EnumTipo {
 
     BASE("B", "BASE"),
     ADICIONAL("A", "ADICIONAL"),
@@ -16,16 +16,16 @@ public enum EnumTipoIngrediente {
     @Getter
     private String descricao;
 
-    EnumTipoIngrediente(String codigo, String descricao) {
+    EnumTipo(String codigo, String descricao) {
         this.codigo = codigo;
         this.descricao = descricao;
     }
 
-    public static EnumTipoIngrediente valueOfCodigo(String codigo) {
+    public static EnumTipo valueOfCodigo(String codigo) {
         if (StringUtils.isEmpty(codigo)) {
             return null;
         }
-        return Arrays.stream(EnumTipoIngrediente.values())
+        return Arrays.stream(EnumTipo.values())
                 .filter(element -> element.getCodigo().equalsIgnoreCase(codigo))
                 .findAny()
                 .orElse(null);

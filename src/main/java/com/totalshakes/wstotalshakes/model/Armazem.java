@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Data
 @SuperBuilder
@@ -13,18 +14,17 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "armazens")
-@PrimaryKeyJoinColumn(name = "ingrediente_id")
-public class Armazem extends Ingrediente {
+public class Armazem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Integer id;
 
-//    @ManyToOne
-//    @JoinColumn(name = "ingrediente_id")
-//    private Ingrediente ingrediente;
-
     @Column(name = "quantidade")
     private Integer quantidade;
+
+    @OneToMany
+    private Set<Ingrediente> estoqueIngredientes;
+
 }
