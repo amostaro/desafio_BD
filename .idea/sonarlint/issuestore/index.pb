@@ -1,23 +1,31 @@
 
-9
-	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-p
-@src/main/java/com/totalshakes/wstotalshakes/model/Adicional.java,2/5/2560e971f0123cb0974c191fd7e780a3fb17338e
-n
->src/main/java/com/totalshakes/wstotalshakes/model/Armazem.java,0/7/07c3ab20b8f37770204e06f0a2e00d0dc7a7f2a7
 z
 Jsrc/main/java/com/totalshakes/wstotalshakes/controller/BaseController.java,5/8/580d1a0cb4eb015304d99c890142d4bccef91230
-u
-Esrc/main/java/com/totalshakes/wstotalshakes/comum/BaseExtensions.java,f/7/f738a8a93452cae4c75c45fdb33baf67cd427108
-t
-Dsrc/main/java/com/totalshakes/wstotalshakes/service/BaseService.java,c/8/c8657b663ef2bf8272559d7ce59b635c1bfe9c0e
 t
 Dsrc/main/java/com/totalshakes/wstotalshakes/utils/DateTimeUtils.java,4/0/40fa32f750789c840f163694d4047d6523aa8c78
-r
-Bsrc/main/java/com/totalshakes/wstotalshakes/model/Ingrediente.java,8/5/8561c81efc0bafb5a6624e33adfde380865a9b17
 y
 Isrc/main/java/com/totalshakes/wstotalshakes/WstotalshakesApplication.java,5/3/532c25378f119928e0fc18e9da4f1b982694b8c8
-s
-Csrc/main/java/com/totalshakes/wstotalshakes/DTO/IngredienteDTO.java,6/2/622bc5b21d8f409b5ca239a44c172a66f37b2a40
-7
-pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+w
+G.idea/sonarlint/issuestore/5/3/532c25378f119928e0fc18e9da4f1b982694b8c8,2/a/2a8e4c45496e95ff3ebf8b5b1e4b124e2ce52ee2
+w
+G.idea/sonarlint/issuestore/f/7/f738a8a93452cae4c75c45fdb33baf67cd427108,4/8/48807ad00324e772c4e37041ba4bf48717ad53e9
+w
+G.idea/sonarlint/issuestore/4/0/40fa32f750789c840f163694d4047d6523aa8c78,5/2/52333b1ced21a0b88c68ce37097179a23371ad04
+w
+G.idea/sonarlint/issuestore/c/8/c8657b663ef2bf8272559d7ce59b635c1bfe9c0e,3/1/312038a3842c102d7c90d066630a16ebdabffff2
+w
+G.idea/sonarlint/issuestore/5/8/580d1a0cb4eb015304d99c890142d4bccef91230,0/0/006764995714da18923c4f1c4eb4e12e64ab6e73
+Ö
+Usrc/main/java/com/totalshakes/wstotalshakes/exception/EstoqueQuantidadeException.java,1/5/1585b6da254835caa64482bdf75ae63c8eea8a59
+ã
+[src/main/java/com/totalshakes/wstotalshakes/exception/IngredienteJaCadastradoException.java,1/9/199d55218190c0924a45826d876b2958d84241da
+å
+\src/main/java/com/totalshakes/wstotalshakes/exception/IngredienteNaoEncontradoException.java,0/0/0096550c0cf09b02a59ca6dfeb37cace6a521a63
+Ü
+Vsrc/main/java/com/totalshakes/wstotalshakes/exception/QuantidadeInvalidaException.java,b/3/b38a28e323795c8bdd94ff944baae02e73809391
+q
+Asrc/main/java/com/totalshakes/wstotalshakes/DTO/AdicionalDTO.java,b/1/b1e76499912c42c151e1061a1bf1ce377e7f8340
+9
+	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+Å
+Qsrc/main/java/com/totalshakes/wstotalshakes/repository/IngredienteRepository.java,8/0/8003df1746be1ce39d5f0e2d3967415105267145

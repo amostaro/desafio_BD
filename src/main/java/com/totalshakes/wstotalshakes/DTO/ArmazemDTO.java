@@ -1,17 +1,17 @@
 package com.totalshakes.wstotalshakes.DTO;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+
+import javax.persistence.Column;
 
 @Data
-@Builder
+//@SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-public class IngredienteDTO {
+public class ArmazemDTO extends IngredienteDTO{
 
-    private String nome;
-    private String tipoIngrediente;
-//    private ArmazemDTO armazemDTO;
+    private Integer quantidade;
 }

@@ -54,11 +54,11 @@ public class IngredienteController extends BaseController {
 //        return new ResponseEntity<>(HttpStatus.OK);
 //    }
 
-    @PutMapping("/update")
-    public ResponseEntity<Ingrediente> updateIngrediente(@Valid @RequestBody IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
-        ingredienteService.updateIngrediente(ingredienteDTO);
-        return new ResponseEntity<>(HttpStatus.OK);
-    }
+//    @PutMapping("/update")
+//    public ResponseEntity<Ingrediente> updateIngrediente(@Valid @RequestBody IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
+//        ingredienteService.updateIngrediente(ingredienteDTO);
+//        return new ResponseEntity<>(HttpStatus.OK);
+//    }
 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Ingrediente> deleteIngredienteById(@Valid @PathVariable("id") Integer idIngrediente) throws IngredienteNaoEncontradoException {

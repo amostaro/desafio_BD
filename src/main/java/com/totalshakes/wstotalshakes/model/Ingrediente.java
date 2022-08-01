@@ -1,6 +1,5 @@
 package com.totalshakes.wstotalshakes.model;
 
-import com.totalshakes.wstotalshakes.comum.BaseEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,7 +13,8 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Entity
 @Table(name = "ingredientes")
-public class Ingrediente extends BaseEntity {
+@Inheritance(strategy = InheritanceType.JOINED)
+public abstract class Ingrediente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -22,4 +22,15 @@ public class Ingrediente extends BaseEntity {
 
     @Column(name = "nome")
     private String nome;
+
+    //EnumTipoIngrediente
+    @Column(name = "tipo_ingrediente", length = 1)
+    private String tipoIngrediente;
+
+//    @ManyToOne
+//    @JoinColumn(name = "armazem_id")
+//    private Armazem armazem;
+
+//    @OneToMany
+//    private Adicional adicional;
 }
