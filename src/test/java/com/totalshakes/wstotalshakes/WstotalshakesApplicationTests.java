@@ -26,13 +26,13 @@ class WstotalshakesApplicationTests {
 
 	@Test
 	@BeforeEach
-	void getIngredientes() {
+	void testGetIngredientes() {
 		ingredienteRepository.findAll();
 		armazemRepository.findAll();
 	}
 
 	@Test
-	void saveIngrediente() {
+	void testSaveIngrediente() {
 //		Ingrediente ingrediente = new Ingrediente();
 //		ingrediente.setNome("Sorvete");
 //		ingrediente.setTipo("B");
@@ -52,8 +52,8 @@ class WstotalshakesApplicationTests {
 		armazem.setEstoqueIngredientes(new HashSet<Ingrediente>());
 
 		Ingrediente ingrediente = new Ingrediente();
-		ingrediente.setNome("Iogurte");
-		ingrediente.setTipo("T");
+		ingrediente.setNome("Chocolate");
+		ingrediente.setTipo("A");
 		ingrediente.setArmazem(armazem);
 
 		armazemRepository.save(armazem);
