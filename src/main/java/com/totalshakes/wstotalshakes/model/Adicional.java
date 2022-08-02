@@ -22,7 +22,7 @@ public class Adicional extends BaseEntity {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "ingrediente_id")
+    @JoinColumn(name = "fk_ingrediente_id")
     private Ingrediente ingrediente;
 
 }

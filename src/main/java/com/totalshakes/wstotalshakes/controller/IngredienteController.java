@@ -15,8 +15,8 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
-//@RequiredArgsConstructor
 @RestController
+//@RequiredArgsConstructor
 @RequestMapping("/api/ingredientes")
 public class IngredienteController extends BaseController {
 
@@ -42,18 +42,6 @@ public class IngredienteController extends BaseController {
         return ResponseEntity.ok(ingrediente);
     }
 
-//    @GetMapping("/listar")
-//    public ResponseEntity<Ingrediente> getIngrediente(@Valid @RequestBody IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
-//        ingredienteService.getIngrediente(ingredienteDTO);
-//        return new ResponseEntity<>(HttpStatus.OK);
-//    }
-
-//    @PutMapping("/update/{id}")
-//    public ResponseEntity<Ingrediente> updateIngredienteById(@Valid @PathVariable("id") Integer idIngrediente) throws IngredienteNaoEncontradoException {
-//        ingredienteService.updateIngredienteById(idIngrediente);
-//        return new ResponseEntity<>(HttpStatus.OK);
-//    }
-
     @PutMapping("/update")
     public ResponseEntity<Ingrediente> updateIngrediente(@Valid @RequestBody IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
         ingredienteService.updateIngrediente(ingredienteDTO);
@@ -65,11 +53,5 @@ public class IngredienteController extends BaseController {
         ingredienteService.deleteIngredienteById(idIngrediente);
         return new ResponseEntity<>(HttpStatus.OK);
     }
-
-//    @DeleteMapping("/delete")
-//    public ResponseEntity<Ingrediente> deleteIngrediente(@Valid @RequestBody IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
-//        ingredienteService.deleteIngrediente(ingredienteDTO);
-//        return new ResponseEntity<>(HttpStatus.OK);
-//    }
 
 }

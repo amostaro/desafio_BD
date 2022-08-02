@@ -5,14 +5,13 @@ import com.totalshakes.wstotalshakes.exception.IngredienteJaCadastradoException;
 import com.totalshakes.wstotalshakes.exception.IngredienteNaoEncontradoException;
 import com.totalshakes.wstotalshakes.model.Ingrediente;
 import com.totalshakes.wstotalshakes.repository.IngredienteRepository;
-import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@RequiredArgsConstructor
+//@RequiredArgsConstructor
 @Service
 public class IngredienteService extends BaseService{
 
@@ -64,24 +63,6 @@ public class IngredienteService extends BaseService{
 
     }
 
-//    public Ingrediente getIngrediente(IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
-//
-//        Ingrediente ingrediente = this.getIngredienteById(ingredienteDTO.getId());
-//
-//        //TODO
-//
-//        return ingredienteRepository.save(ingrediente);
-//    }
-
-//    public void updateIngredienteById(Integer idIngrediente) throws IngredienteNaoEncontradoException {
-//
-//        Ingrediente ingrediente = this.getIngredienteById(idIngrediente);
-//
-//        ingrediente.setNome(ingrediente.getNome());
-//
-//        ingredienteRepository.save(ingrediente);
-//    }
-
     public Ingrediente updateIngrediente(IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
 
         Ingrediente ingrediente = null;
@@ -102,14 +83,4 @@ public class IngredienteService extends BaseService{
         ingredienteRepository.deleteById(idIngrediente);
     }
 
-//    public void deleteIngrediente(IngredienteDTO ingredienteDTO) throws IngredienteNaoEncontradoException {
-//
-//        //TODO
-//
-//        Ingrediente ingrediente = this.getIngredienteById(ingredienteDTO.getId());
-//
-//        //TODO
-//
-//        ingredienteRepository.delete(ingrediente);
-//    }
 }
