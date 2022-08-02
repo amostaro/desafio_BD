@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 //@RequiredArgsConstructor
-@RequestMapping("/api/ingredientes")
+@RequestMapping("/api/v1/ingrediente")
 public class IngredienteController extends BaseController {
 
     @Autowired
@@ -30,13 +30,13 @@ public class IngredienteController extends BaseController {
         return ResponseEntity.created(location).body(novoIngrediente);
     }
 
-    @GetMapping("/listar-todos")
+    @GetMapping("/get-all")
     public ResponseEntity<List<Ingrediente>> getAllIngredientes() {
         List<Ingrediente> ingredientesList = ingredienteService.getAllIngredientes();
         return ResponseEntity.ok(ingredientesList);
     }
 
-    @GetMapping("/listar/{id}")
+    @GetMapping("/get/{id}")
     public ResponseEntity<Ingrediente> getIngredienteById(@Valid @PathVariable("id") Integer idIngrediente) throws IngredienteNaoEncontradoException {
         Ingrediente ingrediente = ingredienteService.getIngredienteById(idIngrediente);
         return ResponseEntity.ok(ingrediente);
