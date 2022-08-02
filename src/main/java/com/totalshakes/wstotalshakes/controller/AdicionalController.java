@@ -15,7 +15,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/adicionais")
+@RequestMapping("/api/v1/adicional")
 public class AdicionalController extends BaseController {
 
 //    @Autowired
@@ -28,13 +28,13 @@ public class AdicionalController extends BaseController {
         return ResponseEntity.created(location).body(novoAdicional);
     }
 
-    @GetMapping("/listar-todos")
+    @GetMapping("/get-all")
     public ResponseEntity<List<Adicional>> getAllAdicionals() {
         List<Adicional> adicionalsList = adicionalService.getAllAdicionals();
         return ResponseEntity.ok(adicionalsList);
     }
 
-    @GetMapping("/listar/{id}")
+    @GetMapping("/get/{id}")
     public ResponseEntity<Adicional> getAdicionalById(@Valid @PathVariable("id") Integer idAdicional) throws IllegalArgumentException {
         Adicional adicional = adicionalService.getAdicionalById(idAdicional);
         return ResponseEntity.ok(adicional);
