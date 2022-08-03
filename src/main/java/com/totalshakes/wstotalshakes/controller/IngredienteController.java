@@ -15,8 +15,8 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
-@RestController
 //@RequiredArgsConstructor
+@RestController
 @RequestMapping("/api/v1/ingrediente")
 public class IngredienteController extends BaseController {
 

@@ -31,7 +31,7 @@ public class IngredienteService extends BaseService{
             if (ingredienteRepetido == null) {
                 ingredienteDTO.setNome(ingredienteDTO.getNome());
             } else {
-                throw new IngredienteJaCadastradoException();
+                throw new IngredienteJaCadastradoException("ingrediente:"+ingredienteDTO.getNome());
             }
         }
 
@@ -54,10 +54,10 @@ public class IngredienteService extends BaseService{
 
         try {
             ingrediente = ingredienteRepository.findById(idIngrediente).orElseThrow(
-                    () -> new IngredienteNaoEncontradoException()
+                    () -> new IngredienteNaoEncontradoException("ingrediente:"+idIngrediente)
             );
         } catch (Exception e) {
-            throw new IngredienteNaoEncontradoException();
+            throw new IngredienteNaoEncontradoException("ingrediente:"+idIngrediente);
         }
         return ingrediente;
 
@@ -70,7 +70,7 @@ public class IngredienteService extends BaseService{
             ingrediente = this.getIngredienteById(ingredienteDTO.getId());
             ingrediente.setNome(ingredienteDTO.getNome());
         } else {
-            throw new IngredienteNaoEncontradoException();
+            throw new IngredienteNaoEncontradoException("ingrediente:"+ingredienteDTO.getNome());
         }
 
         return ingredienteRepository.save(ingrediente);

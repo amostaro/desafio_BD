@@ -13,6 +13,6 @@ import lombok.experimental.SuperBuilder;
 public class AdicionalDTO {
 
     private Integer id;
-    private Ingrediente ingrediente;
+    private IngredienteDTO ingredienteDTO;
 
 }

@@ -3,7 +3,7 @@ package com.totalshakes.wstotalshakes.controller;
 import com.totalshakes.wstotalshakes.DTO.AdicionalDTO;
 import com.totalshakes.wstotalshakes.model.Adicional;
 import com.totalshakes.wstotalshakes.service.AdicionalService;
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,12 +13,13 @@ import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
+
+//@RequiredArgsConstructor
 @RestController
-@RequiredArgsConstructor
 @RequestMapping("/api/v1/adicional")
 public class AdicionalController extends BaseController {
 
-//    @Autowired
+    @Autowired
     private AdicionalService adicionalService;
 
     @PostMapping("save")
@@ -29,9 +30,9 @@ public class AdicionalController extends BaseController {
     }
 
     @GetMapping("/get-all")
-    public ResponseEntity<List<Adicional>> getAllAdicionals() {
-        List<Adicional> adicionalsList = adicionalService.getAllAdicionals();
-        return ResponseEntity.ok(adicionalsList);
+    public ResponseEntity<List<Adicional>> getAllAdicionais() {
+        List<Adicional> adicionaisList = adicionalService.getAllAdicionais();
+        return ResponseEntity.ok(adicionaisList);
     }
 
     @GetMapping("/get/{id}")
